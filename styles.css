@@ -1,0 +1,211 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #ff9a9e, #fecfef, #feada6, #f6d365, #fda085);
+    background-size: 400% 400%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.6s, color 0.6s;
+    animation: gradientBackground 7s ease infinite;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body.dark-mode {
+    background: #1a1a1a;
+    background-size: cover;
+    animation: none;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    width: 400px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .container {
+    background: rgba(34, 34, 34, 0.9);
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+body.dark-mode h1 {
+    color: #fff;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+input, select, button {
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.4);
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 86, 179, 0.6);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid transparent;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    color: #333;
+}
+
+body.dark-mode li {
+    background: #444;
+    color: #fff;
+}
+
+li.low {
+    border-color: #27ae60;
+}
+
+li.medium {
+    border-color: #f1c40f;
+}
+
+li.high {
+    border-color: #e74c3c;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+button.delete, button.edit, button.complete {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button.delete {
+    background: #e74c3c;
+}
+
+button.edit {
+    background: #3498db;
+    margin-left: 5px;
+}
+
+button.complete {
+    background: #2ecc71;
+    margin-left: 5px;
+}
+
+button.delete:hover, button.edit:hover, button.complete:hover {
+    transform: scale(1.05);
+}
+
+#dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: #f39c12;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(243, 156, 18, 0.4);
+    margin: 20px auto;
+    width: fit-content;
+}
+
+
+#dark-mode-toggle:hover {
+    background: #e67e22;
+    box-shadow: 0 6px 8px rgba(230, 126, 34, 0.6);
+}
+
+#dark-mode-toggle .icon {
+    font-size: 1.2em;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    color: #333;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.footer a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer a img.linkedin-logo {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.footer a:hover img.linkedin-logo {
+    transform: scale(1.2);
+}
+
+body.dark-mode .footer p {
+    color: #fff;
+}
